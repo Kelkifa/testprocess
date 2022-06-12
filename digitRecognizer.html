@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Import TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <!-- Import tfjs-vis -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+
+</head>
+
+<style>
+    body {
+        margin: 0;
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    #canvas {
+        border: 1px solid orange;
+    }
+
+    #canvas2 {
+        width: 28px;
+        height: 28px;
+    }
+
+    .predict {
+        color: red;
+    }
+</style>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <button id="clearBtn">Clear</button>
+    <button id="predictBtn">predict</button>
+
+    <br />
+    <canvas id="canvas2"></canvas>
+
+    <div class="predict">predict value: <span id="value"></span></div>
+
+</body>
+<!-- <script src="./js/digitRecognizer/digitRecognizerData.js" type="module"></script>
+<script src="./js/digitRecognizer/digitRecognizer.js" type="module"></script> -->
+
+<script src="./js/digitRecognizer/drawing.js" type="module"></script>
+<script src="./js/digitRecognizer/index.js" type="module"></script>
+
+</html>

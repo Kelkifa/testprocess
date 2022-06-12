@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: rgb(212, 209, 209);
+    }
+
+    .container {
+        transform-style: preserve-3d;
+        display: flex;
+        gap: 10px;
+        transform: rotateY(20deg) rotatex(10deg);
+    }
+
+    .container .text {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        transform-style: preserve-3d;
+        transition: 2.5s ease-in-out;
+    }
+
+    .container:hover .text {
+        transform: rotateX(360deg);
+    }
+
+    .container .text:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #373737;
+        transform-origin: left;
+        transform: rotateY(90deg) translateX(-50px);
+        /* border-radius: 5px;k */
+
+    }
+
+    .container .text span {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100%;
+
+        font-size: 4em;
+        color: #fff;
+        background: linear-gradient(#434343, #535353);
+        transform-style: preserve-3d;
+        transform: rotateX(calc(90deg * var(--i))) translateZ(50px);
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="text" style='--j:0;'>
+            <span style="--i:0">1</span>
+            <span style="--i:1">2</span>
+            <span style="--i:2">3</span>
+            <span style="--i:3">4</span>
+        </div>
+    </div>
+</body>
+
+</html>

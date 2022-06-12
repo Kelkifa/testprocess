@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/table2excel@1.0.4/dist/table2excel.js"></script>
+</head>
+
+<style>
+    .table thead {
+        text-align: left;
+    }
+</style>
+
+<body>
+    <button id="btnExport">export</button>
+    <table id="table" class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" name="id" /></td>
+                <td>huan</td>
+                <td>huanvip455@gmail.com</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>huan2</td>
+                <td>huanvip455@gmail.com</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>thuong</td>
+                <td>ttdthuong@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+
+<!-- <script>
+
+    // const btn = document.querySelector('#btnExport');
+
+    // btn.addEventListener('click', () => {
+    var table2excel = new Table2Excel();
+    table2excel.export(document.querySelector("#table"));
+    // })
+
+</script> -->
+
+<script>
+    const element = document.createElement("script")
+    element.src = "./js/test.js";
+    document.querySelector('body').appendChild(element);
+</script>
+
+
+</html>

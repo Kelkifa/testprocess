@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .grid {
+        width: 600px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto;
+        background-color: gray;
+    }
+
+    .item {
+        height: 40px;
+    }
+
+    .item1 {
+        background-color: orange;
+        height: 40px;
+
+        grid-column: 1 / span 3;
+    }
+
+    .item2 {
+        background-color: pink;
+
+        grid-column: 2 / span 5;
+        grid-row: 5 / span 1
+    }
+</style>
+
+<body>
+    <div class="grid">
+        <div class="item item1">
+        </div>
+        <div class="item item2"></div>
+    </div>
+</body>
+
+</html>

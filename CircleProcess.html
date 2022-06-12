@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .progress-circle {
+        --chuvi: 3;
+
+        stroke-dasharray: 189;
+        stroke-dashoffset: 189;
+    }
+</style>
+
+<body>
+    <svg class="progress" width="100" height="100">
+        <circle class="progress-circle" cx="50" cy="50" r="30" fill="transparent" stroke="blue" stroke-width="5">
+        </circle>
+    </svg>
+
+</body>
+<script>
+    // const circle = document.querySelector('.progress-circle');
+    // const totalLength = circle.getTotalLength();
+
+    // let i = 0;
+    // const values = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+    // setInterval(() => {
+    //     if (i >= 10) i = 0;
+    //     circle.style.strokeDashoffset = totalLength - (values[i] / 100) * totalLength;
+    //     i++
+    // }, 1000)
+
+</script>
+
+</html>

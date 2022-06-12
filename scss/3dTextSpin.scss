@@ -1,0 +1,70 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	background-color: #000;
+	color: #fff;
+
+	min-height: 100vh;
+
+	display: grid;
+	place-items: center;
+	perspective: 500px;
+}
+.scene {
+	transform-style: preserve-3d;
+	transform: rotateX(-25deg);
+}
+.banner {
+	display: flex;
+
+	transform-style: preserve-3d;
+	animation: rotate 15s infinite linear;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotateY(-360deg);
+	}
+}
+$width: 50px;
+
+.panel {
+	// position: relative;
+	position: absolute;
+	transform-style: preserve-3d;
+
+	transform: translate(-50%, -50%) rotateY(var(--angle)) translateZ(190px);
+
+	width: $width;
+	height: 95px;
+	// border: 1px solid white;
+	// background-color: black;
+	overflow: hidden;
+}
+
+.panel:hover {
+	transform: scale(1.5);
+}
+.panel::before {
+	position: absolute;
+	left: var(--left);
+	top: var(--top);
+
+	content: "Hello World, it's a nice day!";
+	font-size: 96px;
+	width: max-content;
+	color: hsl(var(--hue), 75%, 75%);
+}
+
+@for $i from 0 to 24 {
+	.panel:nth-child(#{$i + 1}) {
+		--left: #{$width * $i * -1};
+		--hue: #{360 / 24 * $i};
+		--angle: #{360deg / 24 * $i};
+	}
+}
