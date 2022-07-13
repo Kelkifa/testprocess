@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .btn{
+    position: relative;
+    outline: none;
+    background-color: transparent;
+    border: 0.1rem solid orange;
+    color: orange;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .btn:hover:before {
+    opacity: 1;
+  }
+
+  .btn:before{
+    content: '';
+    position: absolute;
+
+    height: 100%;
+    border-radius: 4px;
+
+    background-color: red;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    z-index: 1;
+    width: 100%;
+    opacity: 0;
+  }
+
+</style>
+<body>
+  <div type="button" class="btn">button</div>
+</body>
+</html>

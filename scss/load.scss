@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  height: 100vh;
+}
+$size: 10px;
+$duration: 1s;
+
+$list: 1, 2, 3, 4, 5 , 6, 7, 8, 9;
+
+.load {
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  animation: load $duration linear infinite;
+
+  &_item {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+
+    background-color: black;
+    position: absolute;
+
+
+    @each $itemNumber in $list {
+     &-#{$itemNumber}{
+       animation: item#{$itemNumber} $duration linear infinite;
+     } 
+    }
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes item1 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-$size, -$size);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+@keyframes item2 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -$size);
+  }
+  100%{
+    transform: translate(0, 0);
+  } 
+}
+@keyframes item3 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate($size, -$size);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+@keyframes item4 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-$size, 0);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+@keyframes item6 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate($size, 0);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+@keyframes item7 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-$size, $size);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+@keyframes item8 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, $size);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}
+@keyframes item9 {
+  0%{
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate($size, $size);
+  }
+  100%{
+    transform: translate(0, 0);
+  }
+}

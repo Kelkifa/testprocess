@@ -1,0 +1,9 @@
+.test {
+  width: 0;
+}
+
+* {
+  &_secondary {
+    color: blue;
+  }
+}
