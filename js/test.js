@@ -1,5 +1,6 @@
 const data = {
   name: 'huan',
-  age: 22,
-  email: 'plhuan455@gmail.com'
+  age: 23,
+  email: 'huanpham455@gmail.com',
+  address: 'DN'
 }
